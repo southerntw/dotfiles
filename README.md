@@ -1,9 +1,9 @@
 ![alt text](https://i.ibb.co/KKdPywZ/Deepin-Screenshot-select-area-20201225045255.png)
-# WORK IN PROGRESS!
+# work in progress!
 The config still messy. I'll tidy it up later.
 Design still far from finished.
 
-# FETCH
+# fetch
 OS: Arch Linux x86_64<br>
 Kernel: 5.9.10-arch1-1<br>
 Shell: fish 3.1.2<br>
@@ -14,6 +14,6 @@ Icons: candy-icons<br>
 Terminal: alacritty<br>
 Terminal Font: jetbrains mono<br>
 
-# TO DO
+# to do
 - Total design transformation
 - Tidy up the config
