@@ -1,3 +1,4 @@
+![alt text](https://i.ibb.co/KKdPywZ/Deepin-Screenshot-select-area-20201225045255.png)
 # WORK IN PROGRESS!
 The config still messy. I'll tidy it up later.
 Design still far from finished.
@@ -13,5 +14,6 @@ Icons: candy-icons<br>
 Terminal: alacritty<br>
 Terminal Font: jetbrains mono<br>
 
-# SCREENSHOTS
-![alt text](https://i.ibb.co/KKdPywZ/Deepin-Screenshot-select-area-20201225045255.png)
+# TO DO
+- Total design transformation
+- Tidy up the config
