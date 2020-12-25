@@ -1,6 +1,6 @@
 ![alt text](https://i.ibb.co/KKdPywZ/Deepin-Screenshot-select-area-20201225045255.png)
 # work in progress!
-The config still messy. I'll tidy it up later.
+The config still messy. Maybe will organize them later.
 Design still far from finished.
 
 # fetch
