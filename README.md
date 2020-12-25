@@ -14,6 +14,6 @@ Icons: candy-icons<br>
 Terminal: alacritty<br>
 Terminal Font: jetbrains mono<br>
 
-# to do
+# stuff i procrastinate on
 - Total design transformation
 - Tidy up the config
