@@ -45,7 +45,7 @@ bindsym $mod+Shift+q kill
 set $bg-color #2f343f
 set $text-color #f3f4f5
 
-bindsym $mod+d exec --no-startup-id ~/.config/rofi/bin/launcher_colorful 
+bindsym $mod+d exec --no-startup-id ~/.config/rofi/bin/launcher_text 
 # bindsym $mod+d exec rofi -show run
 # There also is the (new) i3-dmenu-desktop which only displays applications
 # shipping a .desktop file. It is a wrapper around dmenu, so you need that
@@ -175,13 +175,22 @@ bindsym $mod+r mode "resize"
 
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
-# bar {
-#        status_command i3status
-#}
+bar {
+  height 35 
+  tray_output none
+  workspace_buttons no
+  position top
+  i3bar_command i3bar -t
+  colors {
+    background #00000000
+  }
+}
 
-exec feh --bg-scale ~/Pictures/thumbs/n4.png
-exec_always ~/.config/polybar/launch.sh
+exec feh --bg-scale ~/Downloads/wallhaven-1jk68v_1366x768_auto_x2.png
+exec sleep 5; notify-send "Welcome back, Pal."
+exec_always ~/.config/polybar/launchEDIT.sh
 exec_always picom --config ~/.config/picom/picom.conf --experimental-backends
+exec_always dunst
 new_window none
 
 hide_edge_borders none
@@ -190,11 +199,15 @@ client.focused #787878 #787878 #e3e3e3 #e3e3e3 #e3e3e3
 bindsym 0x1008ff03 exec "lux -s 10%"
 bindsym 0x1008ff02 exec "lux -a 10%"
 
-bindsym 0x1008ff11 exec "pactl set-sink-volume 0 -1.5%"
-bindsym 0x1008ff12 exec "pactl set-sink-mute 0 toggle"
-bindsym 0x1008ff13 exec "pactl set-sink-volume 0 +1.5%"
+bindsym 0x1008ff13 exec ~/.config/dunst/volume.sh up 
+bindsym 0x1008ff12 exec ~/.config/dunst/volume.sh mute 
+bindsym 0x1008ff11 exec ~/.config/dunst/volume.sh down 
 
-bindsym 0xff61 exec "deepin-screenshot"
+bindsym 0xff61 exec ~/programming/2020/etc/screenshot.sh normal 
+bindsym $mod+shift+0xff61 exec ~/programming/2020/etc/screenshot.sh delayed 
+bindsym $mod+0xff61 exec "deepin-screenshot"
+bindsym $mod+shift+p exec betterlockscreen -l blur
+bindsym $mod+shift+n exec notable 
 # floating 
 for_window [class="calculator"] floating enable
 for_window [class="persepolis"] floating enable
@@ -205,7 +218,7 @@ assign [class="Discord"] $ws9
 for_window [class=".*"] border pixel 0
 # gaps
 #smart_gaps on
-gaps inner 9 
+gaps inner 11
 border_radius 4
 
 for_window [window_role="alacritty"] border_radius 24

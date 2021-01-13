@@ -8,7 +8,7 @@ function fish_prompt
     echo
     set_color red
   end
-  echo ""(set_color blue) @(basename @$PWD)": "
+  echo "﬈ "(set_color 414351)"≈ "
 end
 
 function fish_greeting
